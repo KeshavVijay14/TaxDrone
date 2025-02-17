@@ -41,12 +41,10 @@ export const Hero = () => {
             
             <div className="animate-slide-up delay-200 flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="group">
-                Start Free Trial
+                Start Free Consultant
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button size="lg" variant="outline" className="dark:text-gray-200 dark:hover:text-gray-100">
-                Schedule Demo
-              </Button>
+              
             </div>
           </div>
           
