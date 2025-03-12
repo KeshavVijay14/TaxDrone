@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const Hero = () => {
   const benefits = [
@@ -9,6 +10,13 @@ export const Hero = () => {
     "Secure Data Handling",
     "Fast Processing"
   ];
+  const navigate = useNavigate();
+  const handleNavigation = (hash: string) => {
+    navigate("/");  
+    setTimeout(() => {
+      window.location.hash = hash; 
+    }, 100);    
+  };
 
   return (
     <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-sky-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pb-20">
@@ -40,7 +48,7 @@ export const Hero = () => {
             </div>
             
             <div className="animate-slide-up delay-200 flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="group">
+              <Button size="lg" className="group" onClick={() => handleNavigation("contact")} >
                 Start Free Consultant
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
